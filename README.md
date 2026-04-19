@@ -344,18 +344,22 @@ Open RCM_Payment_Variance_Dashboard.pbix
 
 ```
 rcm-finance-reconciliation/
-├── scripts/
-│   ├── generate_realistic_bank_feed.py   # Simulation with probability distributions
-│   └── import_bank_feed.py               # Bulk load into MySQL
-├── sql/
-│   ├── 01_table_schemas.sql              # InnoDB table definitions
-│   └── 02_reconciliation_views.sql       # Command center view + yield CTE
+├── README.md                                   # Project documentation
 ├── data/
-│   ├── era_summary_load.csv              # ERA header-level data
-│   └── bank_feed_load.csv                # Simulated bank deposit feed
-├── powerbi/
-│   └── RCM_Payment_Variance_Dashboard.pbix
-└── requirements.txt
+│   ├── era_summary_load.csv                    # Parsed ERA header data
+│   ├── era_claims_load.csv                     # Parsed granular claims data
+│   └── bank_feed_load.csv                      # Simulated banking data feed
+├── scripts/
+│   ├── 01_generate_synthetic_era.py            # Generates initial expected ERA CSVs
+│   ├── 02_generate_realistic_bank_feed.py      # Injects probability-based variance
+│   └── 03_import_to_mysql.py                   # SQLAlchemy DB bulk ingestion
+├── sql/
+│   ├── 01_schema_creation.sql                  # Star-schema DDL scripts
+│   ├── 02_reconciliation_engine.sql            # Core views and triage logic
+│   └── 03_analytical_queries.sql               # RCM Yield CTEs and window functions
+├── dashboard/
+│   └── RCM_Payment_Variance_Dashboard.pbix     # Interactive DirectQuery dashboard
+└── requirements.txt                            # Python dependencies (pandas, sqlalchemy)
 ```
 
 ---
