@@ -67,7 +67,7 @@ Large hospital systems write off material sums annually due to the absence of da
 ├──────────────────┬────────────────────────────────────────────────┤
 │  PHASE 1         │  Python (Pandas)                               │
 │  Data Generation │  Synthetic ERA + bank feed with injected       │
-│                  │  variance: 65% match · 20% short pay ·        │
+│                  │  variance: 65% match · 20% short pay ·         │
 │                  │  15% missing · +150 noise transactions         │
 ├──────────────────┼────────────────────────────────────────────────┤
 │  PHASE 2         │  MySQL (InnoDB)                                │
@@ -80,7 +80,7 @@ Large hospital systems write off material sums annually due to the absence of da
 │                  │  nulls · CASE WHEN triage routing              │
 ├──────────────────┼────────────────────────────────────────────────┤
 │  PHASE 4         │  Power BI (DirectQuery)                        │
-│  BI Dashboard    │  KPI cards · Donut chart · Payer leakage bar  │
+│  BI Dashboard    │  KPI cards · Donut chart · Payer leakage bar   │
 │                  │  Conditional formatting · Operational matrix   │
 └──────────────────┴────────────────────────────────────────────────┘
 ```
