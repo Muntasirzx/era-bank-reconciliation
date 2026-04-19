@@ -357,7 +357,7 @@ rcm-finance-reconciliation/
 │   ├── 01_schema_creation.sql                  # Star-schema DDL scripts
 │   ├── 02_reconciliation_engine.sql            # Core views and triage logic
 │   └── 03_analytical_queries.sql               # RCM Yield CTEs and window functions
-├── dashboard/
+├── PowerBI/
 │   └── RCM_Payment_Variance_Dashboard.pbix     # Interactive DirectQuery dashboard
 └── requirements.txt                            # Python dependencies (pandas, sqlalchemy)
 ```
